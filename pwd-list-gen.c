@@ -42,7 +42,7 @@
 #define PREV_INDEX 1
 #define FS_OUT_LEN 6
 #define SYMBOL_LEN 33
-#define MAX_STR_LEN 98
+#define MAX_STR_LEN ((NL_LEN) + (NT_LEN) + (NUM_LEN) + (ALPHA_LEN) * 2 + (SYMBOL_LEN) + 1)
 #define NULL_STR_LEN -1
 #define MIN_ENTRY_LEN 1
 #define DATA_DENOM_LEN 6
