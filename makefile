@@ -35,4 +35,4 @@ asm-instr:
 	wc -l pwd-list-gen.s
 
 clean:
-	$(RM) *.o pwd-list-gen
+	$(RM) *.o pwd-list-gen test.exe
