@@ -14,7 +14,7 @@ SHELL=/bin/bash
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Wpedantic -std=c99 -O0 -g -D_POSIX_C_SOURCE=200809L
+CFLAGS = -Wall -Werror -Wextra -Wpedantic -std=c99 -O0 -g -D_POSIX_C_SOURCE=200809L
 
 LDLIBS = -lm -pthread
 
@@ -25,7 +25,7 @@ all: pwd-list-gen
 pwd-list-gen: pwd-list-gen.o
 
 test: pwd-list-gen.o
-	$(CC) -Wall -Wextra -Wpedantic -std=c99 -O0 -g $< $(LDLIBS) -o test.exe
+	$(CC) -Wall -Werror -Wextra -Wpedantic -std=c99 -O0 -g $< $(LDLIBS) -o test.exe
 	chmod 0331 test.exe
 
 pwd-list-gen.o: pwd-list-gen.c
